@@ -1,0 +1,60 @@
+body {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .content {
+    width: 60%;
+  }
+  
+  /* Form nhập theo chiều dọc */
+  .form-input {
+    display: flex;
+    
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  
+  .form-input input,
+  .form-input button {
+    margin-bottom: 10px;
+    padding: 6px;
+    font-size: 14px;
+  }
+  
+  /* Tiêu đề và nút xoá nằm ngang */
+  .table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .table-header button {
+    padding: 6px 20px;
+    background-color: crimson;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Bảng sản phẩm */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    text-align: center;
+    padding: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  th {
+    background-color: gray;
+    color: white;
+  }
+  
