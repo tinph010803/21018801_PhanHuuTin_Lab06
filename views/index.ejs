@@ -10,10 +10,11 @@
   <div class="content">
 
     <!-- Form nhập sản phẩm theo chiều dọc -->
-    <form action="/add" method="POST" class="form-input">
+    <form action="/add" method="POST" enctype="multipart/form-data" class="form-input">
       <input type="text" name="ma_sp" placeholder="ID sản phẩm" required />
       <input type="text" name="ten_sp" placeholder="Tên sản phẩm" required />
       <input type="number" name="so_luong" placeholder="Số lượng sản phẩm" required />
+      <input type="file" name="image" /> <!-- Thêm dòng này -->
       <button type="submit">Submit</button>
     </form>
 
@@ -30,6 +31,7 @@
           <th>Mã SP</th>
           <th>Tên SP</th>
           <th>Số Lượng</th>
+          <th>Hình ảnh</th> <!-- Thêm cột hình ảnh -->
           <th>Chọn</th>
         </tr>
         <% sanPhams.forEach(item => { %>
@@ -37,6 +39,7 @@
             <td><%= item.ma_sp %></td>
             <td><%= item.ten_sp %></td>
             <td><%= item.so_luong %></td>
+            <td><img width="50px" src="<%= item.image_url %>" /></td> <!-- Hiển thị ảnh -->
             <td><input type="checkbox" name="ma_sp" value="<%= item.ma_sp %>"></td>
           </tr>
         <% }) %>
